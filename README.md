@@ -52,13 +52,33 @@ By default, generated passwords are usually well over the 15-character minimum a
 
 - Python 3.10 or newer
 
-## Usage
+## Quick Start
+
+Clone the repository:
+
+```powershell
+git clone https://github.com/svcgh0st/PythonPassword-Tester-Generator.git
+```
+
+Move into the project folder:
+
+```powershell
+cd PythonPassword-Tester-Generator
+```
 
 Run the interactive tester:
 
 ```powershell
 python password_generator_tester.py
 ```
+
+If your system uses `python3` instead of `python`, run:
+
+```bash
+python3 password_generator_tester.py
+```
+
+## Usage
 
 Generate 10 passwords:
 
@@ -76,6 +96,32 @@ Use more words per generated password:
 
 ```powershell
 python password_generator_tester.py --generate 10 --words 5 --offline
+```
+
+Show the help menu:
+
+```powershell
+python password_generator_tester.py --help
+```
+
+## Command Options
+
+| Option | What it does |
+| --- | --- |
+| `--generate 10` | Generates 10 passwords and exits |
+| `--words 5` | Uses 5 word-like chunks instead of the default 4 |
+| `--offline` | Skips the Have I Been Pwned breach check |
+| `--help` | Shows all available command options |
+
+## Example Session
+
+```text
+Enter password to check, or type 'exit':
+Password failed:
+- Password must be at least 15 characters.
+
+Generate a new password? y/n/exit: y
+Generated password: Brisproath-Mauwaumtre-Broanpread-Flirvu291=
 ```
 
 ## Breach Checking
