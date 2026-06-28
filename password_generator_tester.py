@@ -128,9 +128,6 @@ def check_password(password: str, check_breaches: bool = True) -> tuple[bool, li
     if is_repetitive(password):
         reasons.append("Password is too repetitive.")
 
-    if character_mix_score(password) < 3:
-        reasons.append("Password should use at least 3 of: lowercase, uppercase, numbers, symbols.")
-
     if check_breaches:
         pwned_count = check_pwned_password(password)
 
